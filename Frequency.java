@@ -1,30 +1,30 @@
-import java.util.*;
-public class Frequency
-{
-    public static void main(String arr[])
-    {
-        Scanner sc=new Scanner(System.in);
-        int number,i,count,digit,temp;
-        System.out.println("Enter any Number : ");
-        number=sc.nextInt();
-         System.out.println("Digit\tFrequency");
-        for(i=0;i<=9;i++)
-        {
-            count=0;
-            temp=number;
-            while(temp>0)
-            {
-                digit=temp%10;
-                if(digit==i)
-                {
-                    count++;
-                }
-                temp=temp/10;
-            }
-            if(count>0)
-            {
-                System.out.println(i+"\t"+count);
-            }
-        }
-    }
-}
+import java.util.Scanner;
+public class Frequency   
+{  
+     public static void main(String[] args) {  
+        String str;
+       Scanner sc=new Scanner(System.in);
+        System.out.println("enetr the string");
+        str=sc.nextLine();
+        int[] freq = new int[str.length()];  
+        int i, j;  
+        char string[] = str.toCharArray();  
+        for(i = 0; i <str.length(); i++)
+          {  
+            freq[i] = 1;  
+            for(j = i+1; j <str.length(); j++) 
+            {  
+              if(string[i] == string[j]) 
+                {  
+                    freq[i]++;  
+                    string[j] = '0';  
+                }  
+            }  
+        }  
+        System.out.println("Characters and their corresponding frequencies");  
+        for(i = 0; i <freq.length; i++) {  
+            if(string[i] != ' ' && string[i] != '0')  
+                System.out.println(string[i] + "-" + freq[i]);  
+        }  
+    }  
+}  
