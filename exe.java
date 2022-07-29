@@ -1,0 +1,4 @@
+class exe
+  {
+    int price
+  }
