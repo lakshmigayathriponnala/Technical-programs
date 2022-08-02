@@ -5,36 +5,32 @@
         Sport name: Football
 */ 
       
-import java.util.Scanner;
-public class Sport
-  {
-    private String Sportname;
-    public Sport(String s)
-    {
-      this.Sportname=s;
-    }
-    public void setsportname(String s1)
-    {
-      Sportname=s1;
-    }
-    public String getSportname()
-    {
-      return Sportname;
-    }
-    public static void main(String args[])
-    {
-      Scanner sc=new Scanner(System.in);
-      System.out.println("sportname");
-      String s=sc.nextLine();
-      Sport ob=new Sport(s);
-      System.out.println("sportname="+ob.getSportname());
-      
-    }
-  }
-      
-    
-      
-      
-      
 
-  
+import java.util.*;
+class  Sport {
+
+// Create a member variable for Sport name
+String Sport_name;
+public Sport(String Sport_name)
+  {
+    this.Sport_name=Sport_name;
+  }
+// Set member variable for Sport name
+public void setSport_name(String sport)
+  {
+    Sport_name=sport;
+  }
+public String getSport_name(){
+    return  Sport_name;
+  }
+public static void main(String args[]) {
+Scanner sc=new Scanner(System.in);
+System.out.println("sport name:");
+String s=sc.nextLine();
+// Create object for Sport class
+ Sport obj=new Sport(s);
+// Print the value of Sport name using "this" reference
+System.out.println("sport name:"+obj.getSport_name());
+}
+
+}

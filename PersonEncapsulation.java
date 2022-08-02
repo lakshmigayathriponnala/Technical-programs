@@ -14,42 +14,36 @@
     
      
 */
-import java.util.Scanner;
-class Person { 
-//declare age 
-  private int age;
-
+import java.util.*;
+class Person {
+//declare age
+int Age;
 //create setters and getters
-   public void setAge(int b)
-  {
-    age=b;
+public void setAge(int a){
+     Age=a;
+   }
+public int getAge(){
+    return Age;
   }
-  public int getAge()
-  {
-    return age;
-  }
-    
 }  
 
-class PersonEncapsulation { 
-
-public static void main(String args[]) { 
-
+class  PersonEncapsulation  {
+ 
 //main method
-  //create Scanner object
-  Scanner sc=new Scanner(System.in);
-
+public static void main(String args[]) {
+ 
+//create Scanner object
+Scanner s=new Scanner(System.in);
+System.out.println("Enter Age:");
 //take input from user
-  System.out.println("enter the age:");
-  int b1=sc.nextInt();
-
+int personage=s.nextInt();
+Person obj=new Person();
+obj.setAge(personage);
 // Try accessing age field of Person directly and check whether it’s accessible
-// or not.If not then try accessing it with it’s setter and getter methods. 
-  Person p=new Person();
-  p.setAge(b1);
-  System.out.println("your age:"+p.getAge());
+// or not.If not then try accessing it with it’s setter and getter methods.
+System.out.println(" Your age:"+obj.getAge());
 // Output age  
 
-}   
+}  
 
 } 

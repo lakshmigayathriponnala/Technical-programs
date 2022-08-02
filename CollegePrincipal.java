@@ -9,64 +9,61 @@
      English Teacher      IIT
      Music Teacher        IIT
 */
-
-
-
-class Teacher
-{
-String Designation;
-String CollegeName;
-    void work()
-    {
-        System.out.println(Designation+" "+CollegeName);
-    }
+class Teacher1{
+  String Designation;
+  String CollegeName;
+  void work(){
+  System.out.println(Designation+ "     "+ CollegeName);
+  }
 }
+
 //Add MathTeacher class
-class MathTeacher extends Teacher
-{
-     String Designation="MathTeacher";
-    String CollegeName="IIT";
-     void work()
-    {
-        System.out.println(Designation+" "+CollegeName);
-    }
-}
 
+class MathTeacher extends Teacher1{
+  String Designation="Math Teacher";
+  String CollegeName="IIT";
+  void work()
+  {
+    System.out.println(Designation + "     "+ CollegeName);
+}
+}
 
 //Add EnglishTeacher class
-class EnglishTeacher extends Teacher
-{
-     String Designation="EnglishTeacher";
-     String CollegeName="IIT";
-     void work()
-     {
-          System.out.println(Designation+" "+CollegeName);
-     }
+ 
+class EnglishTeacher extends Teacher1{
+   
+ String Designation="English Teacher";
+  String CollegeName="IIT";
+  void work()
+  {
+    System.out.println(Designation + "   "+ CollegeName);
 }
-//Add MusicTeacher class
-class MusicTeacher extends Teacher
-{
-     String Designation="MusicTeacher";
-     String CollegeName="IIT";
-     void work()
-     {
-          System.out.println(Designation+" "+CollegeName);
-     }
 }
 
+//Add MusicTeacher class
+
+class MusicTeacher extends Teacher1{
+    String Designation="Music Teacher";
+  String CollegeName="IIT";
+  void work()
+  {
+    System.out.println(Designation + "       "
+                       +CollegeName);
+}
+}
+
+ 
 class CollegePrincipal {
 
 //Add the main method here and create all different types of Teacher objects and print there college name designation.
-public static void main(String args[])
-{
-     MathTeacher mt=new MathTeacher();
-     EnglishTeacher et=new EnglishTeacher();
-     MusicTeacher m=new MusicTeacher();
-     mt.work();
-     et.work();
-     m.work();
-     
+public static void main(String args[]){
+  Teacher1 t=new Teacher1();
+  MathTeacher mt=new MathTeacher();
+  EnglishTeacher et=new  EnglishTeacher();
+  MusicTeacher mt1=new MusicTeacher();
+  mt.work();
+  et.work();
+  mt1.work();
+ 
 }
-
-
 }

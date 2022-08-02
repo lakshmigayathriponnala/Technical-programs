@@ -9,31 +9,19 @@
      ComputerTeacher      IIT
 */
 
-class Teacher {
-  void Work()
+class Teacher
   {
-    System.out.println("Work:Teaching");
-  }
-  void Designation()
-  {
-    System.out.println("Designation:Computer Teacher");
-  }
-  void CollegeName()
-  {
-    System.out.println("College name:IIT");
+  String Designation="CollegeName";
+  String ComputerTeacher="IIT";
+  void work(){
+  System.out.println("Designation:"   + Designation );
+  System.out.println("ComputerTeacher:"  + ComputerTeacher);
   }
 }
 
 class ComputerTeacher extends Teacher {
-  public static void main(String args[])
-  {
-    ComputerTeacher c=new ComputerTeacher();
-    c.Work();
-    c.Designation();
-    c.CollegeName();
-    
+  public static void main(String args[]){
+  ComputerTeacher ct=new ComputerTeacher();
+    ct.work();
   }
-
-
 }
-

@@ -15,54 +15,53 @@
     Current Balance    : 67000.89
     
 */
-import java.util.Scanner;
-class BankAccount { 
+import java.util.*;
+ class BankAccount 
+ {
 //declare account_number , account_balance
-  private long BankAccountNumber;
-  private float CurrentBalance;
-
+ private long BankAccount_Number ;
+ private float Current_Balance;
 //create getters and setters
-  public void setBankAccountNumber(long b)
+public void setBankAccount_Number(long acc) 
+   {
+     BankAccount_Number=acc;
+   }
+public void setCurrent_Balance(float bal)  
+   {
+     Current_Balance=bal;
+   }
+public long getBankAccount_Number()
+   {
+   return BankAccount_Number ;
+   }
+public float getCurrent_Balance()
+   {
+   return Current_Balance;
+   }  
+}
+class ExpertHacker
   {
-    BankAccountNumber=b;
-  }
-  public void setCurrentBalance(float bal)
-  {
-    CurrentBalance=bal;
-  }
-  public long getBankAccountNumber()
-  {
-    return BankAccountNumber;
-  }
-  
-   public float getCurrentBalance()
-  {
-    return CurrentBalance;
-  }
-}  
-
-class ExpertHacker { 
-
-public static void main(String args[]) { 
-
+ 
 //main method
-  //create Scanner object
-  Scanner sc=new Scanner(System.in);
-  //Take input from user
-  System.out.println("enter the banck account number");
-  long b1=sc.nextLong();
-   System.out.println("enter the current balance");
-  float bal1=sc.nextFloat();
-  //Create an object of BankAccount class and set account_number and the account_balance
-  BankAccount a=new BankAccount();
+public static void main(String args[]) 
+    {
 
-// Try accessing fields of BankAcccount class and check whether it's accessible 
-a.setBankAccount(b1);
-// or not. If not then try accessing it with it’s setter and getter methods. 
-a.setCurrentBalance(bal1);
-// Print account_number and account_balance 
-  System.out.println("Bank account number:"+a.getBankAccountNumber());
-   System.out.println("current balance:"+a.getCurrentBalance());
-}   
-
+//create Scanner object
+Scanner s=new Scanner(System.in);
+System.out.println("enter BankAccount_Number: ");
+long  account_number=s.nextLong();
+//Take input from user
+System.out.println("enter Current_Balance:");
+ float account_balance =s.nextFloat();
+ 
+//Create an object of BankAccount class and set account_number and the account_balance
+BankAccount obj=new BankAccount();
+// Try accessing fields of BankAcccount class and check whether it's accessible
+  obj. setBankAccount_Number(account_number);
+  obj. setCurrent_Balance( account_balance);
+// or not. If not then try accessing it with it’s setter and getter methods.
+System.out.println("Bank account number:"+obj.getBankAccount_Number());
+ System.out.println(" Current balance:"+obj.getCurrent_Balance());
+// Print account_number and account_balance
+  }  
 } 
