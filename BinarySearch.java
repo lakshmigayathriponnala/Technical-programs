@@ -1,3 +1,21 @@
+/* JFM1T11_Assignment2:
+
+   Write a program to execute the search of a number in a sorted array following the below logic: 
+   If the target element is greater than middle element then you go to the middle of the right of the remaining numbers 
+   or otherwise towards middle of the left of the remaining numbers. 
+   Continue until the number is either found or not found.
+   Prompt the user input from the terminal.
+   
+   Sample Input: 2,5,10,12,15,20,25,31,40
+   Enter number to search x= 20
+
+   Expected Output: Position of element is : 6
+   
+   Enter number to search x= 26
+   Expected Output: Sorry,Key doesn't exist in the array
+   
+*/
+
 import java.util.Scanner;
 
 public class BinarySearch 
@@ -54,6 +72,6 @@ public class BinarySearch
     if (pos == -1)
       System.out.println("Search value is not available in the list");
     else
-      System.out.println("Search value is" + key+ " available at" + pos + "position");
+      System.out.println("Search value is"  + key+   " available at"  + pos + "position");
   }
 }
